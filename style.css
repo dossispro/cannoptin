@@ -6,7 +6,13 @@ body {
 }
 
 /* Hero Section */
-#hero {
+#hero-big {
+    background-color: #f5f5f4!important; 
+    padding: 50px 0;
+    text-align: center;
+}
+
+#hero-small {
     background-color: #f5f5f4!important; 
     padding: 50px 0;
     text-align: center;
@@ -141,3 +147,16 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+
+.btn-custom-link {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    padding: 0; /* Optional: To match link spacing */
+    cursor: pointer; /* To give a link-like pointer */
+  }
+  
+  .btn-custom-link:hover {
+    color: darkblue; /* Optional: Hover effect */
+  }

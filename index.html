@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/dojo/1.18/dijit/themes/claro/claro.css">
 
 </head>
+
+<!-- to-do:
+ - make logo nicer on desktop
+ - make mobile-friendly above the break thing
+  -->
 <body>
   <div class="modal fade" id="tosModal" tabindex="-1" aria-labelledby="tosModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
@@ -46,19 +51,24 @@
             marketing has implemented reCAPTCHA as a security feature to protect
             CANNOPTIN.ca against spam and abuse. reCAPTCHA is subject to the
             Google Privacy Policy and Terms of Service.</p>
-          <h5>PRIVACY</h5>
-          <p>Cannoptin is committed to protecting the privacy and confidentiality of your
-            personal information and employs organizational, contractual, technical and
-            physical security measures to protect information it collects. Cannoptin will keep
-            your personal information for as long as it remains necessary for the identified
-            purposes and in order to comply with applicable legislation. Click the Cannoptin
-            Privacy Policy for more information.</p>
-          <h5>HOW TO UNSUBSCRIBE</h5>
-          <p>You can unsubscribe at any time using the unsubscribe link.
+          <h5>Last revised on November 1, 2024</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            These Cannoptin Email Newsletter Terms and Conditions were last updated
-            on November 1, 2024</p>
-          <h4>Privacy</h4>
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="tosModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Terms</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h3>Privacy</h4>
           <h5>CANNOPTIN PRIVACY POLICY</h5>
           <h5>Protecting your privacy at Cannoptin</h5>
           <p>2758616 Ontario Inc., doing business as the Cannoptin (“Cannoptin”) is
@@ -237,8 +247,134 @@ searching Goolge for “Analytics Opt-out Browser Add-on”
   </div>
 
 
-    <!-- Hero Section -->
-<section id="hero" class="container-fluid d-flex justify-content-center align-items-center">
+<section id="hero-small" class="container-fluid justify-content-center align-items-center d-lg-none d-flex">
+    <div class="row">
+      <h1>Did you know that Cannibis Companies can't advertise to you?</h1>
+      <div class="col-12">
+        <div id="mc_embed_shell" class="card shadow p-4">
+          <!-- Add your CSS link for Mailchimp styles -->
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+            #mc_embed_signup {
+              background: #fff;
+              font: 14px Helvetica, Arial, sans-serif;
+              width: 100%;
+            }
+            /* Customize margins and alignment */
+            .mc-field-group {
+              margin-bottom: 15px;
+            }
+            .mc-field-group label {
+              font-weight: bold;
+              margin-bottom: 5px;
+            }
+            .clear {
+              margin-top: 20px;
+            }
+          </style>
+          <div id="mc_embed_signup">
+            <form action="https://gmail.us14.list-manage.com/subscribe/post?u=43700f6c51712da4fbd3a4c52&amp;id=bb4b484505&amp;f_id=00fab7e5f0" 
+                  method="post" 
+                  id="mc-embedded-subscribe-form" 
+                  name="mc-embedded-subscribe-form" 
+                  class="validate" 
+                  target="_top">
+              <div id="mc_embed_signup_scroll">
+                <h2 class="text-center">Get Verified and let your favourate brands reach out</h2>
+                <p class="text-center lead">Start getting the best offers and promotions!</p>
+                
+                <!-- Email Field -->
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" required>
+                </div>
+      
+                <!-- First Name -->
+                <div class="mc-field-group">
+                  <label for="mce-FNAME">First Name</label>
+                  <input type="text" name="FNAME" class="form-control" id="mce-FNAME">
+                </div>
+      
+                <!-- Last Name -->
+                <div class="mc-field-group">
+                  <label for="mce-LNAME">Last Name</label>
+                  <input type="text" name="LNAME" class="form-control" id="mce-LNAME">
+                </div>
+      
+                <!-- Birthday -->
+                <div class="mc-field-group">
+
+                  <div class="d-flex">
+                    <div class="mc-field-group"><label for="mce-MMERGE5">Are you over 18? </label><select name="MMERGE5" class="" id="mce-MMERGE5"><option value=""></option><option value="Yes">Yes</option><option value="No">No</option></select></div>
+                  </div>
+                </div>  
+
+                <body class="claro">
+                  <form id="myForm">
+                      <label class="checkbox">
+                          <input name="checkbox1" type="checkbox" data-dojo-type="dijit/form/CheckBox" id="checkbox1">
+                          I agree to the 
+                          <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tosModal">
+                            Terms and Conditions
+                          </button>
+                          
+
+                          
+                          
+                      </label>
+                      <span class="error-message" id="error-message" style="display:none;">This checkbox is required.</span>
+                      <br>
+                  </form>
+
+              
+                  <script>
+                    require(["dojo/parser", "dojo/dom", "dojo/on", "dojo/domReady!"], function(parser, dom, on) {
+                        parser.parse();
+            
+                        // Add submit button click handler
+                        on(dom.byId("submitButton"), "click", function() {
+                            const checkbox = dom.byId("checkbox1");
+                            const errorMessage = dom.byId("error-message");
+            
+                            if (!checkbox.checked) {
+                                errorMessage.style.display = "inline"; // Show error message
+                            } else {
+                                errorMessage.style.display = "none"; // Hide error message
+                                alert("Form submitted successfully!");
+                                // Perform form submission or further processing here
+                            }
+                        });
+                    });
+                </script>
+      
+                <!-- Responses -->
+                <div id="mce-responses" class="clear">
+                  <div class="response alert alert-danger d-none" id="mce-error-response"></div>
+                  <div class="response alert alert-success d-none" id="mce-success-response"></div>
+                </div>
+      
+                <!-- Hidden Field -->
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_43700f6c51712da4fbd3a4c52_bb4b484505" tabindex="-1">
+                </div>
+      
+                <!-- Submit Button -->
+                <div class="clear">
+                  <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="m-0 btn btn-primary w-100">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+</section>
+
+    <!-- Hero-big Section -->
+<section id="hero-big" class="container-fluid justify-content-center align-items-center d-lg-flex d-none">
 
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-6 col-sm-12 p-5"> 
@@ -377,25 +513,12 @@ searching Goolge for “Analytics Opt-out Browser Add-on”
 
 
     <!-- How it Works Section -->
-    <section id="how-it-works" class="container-fluid text-white bg-dark-green">
+    <section id="how-it-works" class="container-fluid text-white bg-dark-green-secondary">
       <h3 class="text-center p-5">How Does It Work?</h3>
     
       <!-- Mission Statement -->
-      <div class="container bg-dark-green d-flex justify-content-center align-items-center">
+      
 
-        <div class="row">
-          <div class="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center">
-            <img src="/images/ceo_person.webp" class="logo" alt="CEO">
-          </div>
-          <div class="col-lg-6 col-sm-12 text-center">
-            <p class="lead">Our CEO Lady</p>
-            <p class="display-7">
-              "Marijuanna is legal in Canada. People love deals and discounts - and companies benefit from being able to advertise to their customers. We help connect cannibis companies to their customers. "
-            </p>
-          </div>
-        </div>
-
-    </div>
     
       <!-- Restriction Section -->
       <div class="container-fluid bg-dark-green-secondary">
@@ -497,7 +620,9 @@ searching Goolge for “Analytics Opt-out Browser Add-on”
 </section>
     <!-- Footer -->
     <footer class="footer d-flex justify-content-center">
-        <a href="#faq">FAQ</a> | <a href="#contact">Contact</a> | <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a> | <a href="#contact">Contact</a> | <button type="button" class="btn btn-custom-link" data-bs-toggle="modal" data-bs-target="#privacyModal">
+          Privacy
+        </button>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
