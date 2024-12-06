@@ -144,6 +144,13 @@ body {
     text-decoration: none;
 }
 
+.footer btn {
+    color: #333;
+    margin: 0 15px;
+    text-decoration: ngit one;
+    font-size: 0.9rem;
+}
+
 .footer a:hover {
     text-decoration: underline;
 }
