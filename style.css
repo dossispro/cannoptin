@@ -86,7 +86,9 @@ body {
     font-weight: bold;
 }
 
-
+#mc_embed_signup .mc-address-fields-group {
+    justify-content: start !important;
+}
 
 
 .recaptcha {
