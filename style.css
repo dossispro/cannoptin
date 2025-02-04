@@ -1,4 +1,10 @@
 /* General Styling */
+.box-with-margin {
+    background-color: red;
+    box-shadow: 0 0 10px rgb(177, 33, 33); /* Shadow creates a styled "margin" effect */
+  }
+
+
 body {
     font-family: "Sailec", sans-serif;
     color: #333;
@@ -6,14 +12,9 @@ body {
 }
 
 /* Hero Section */
-#hero-big {
-    background-color: #f5f5f4!important; 
-    padding: 50px 0;
-    text-align: center;
-    height: 100vh
-}
 
-#hero-small {
+
+#hero {
     background-color: #f5f5f4!important; 
     padding: 50px 0;
     text-align: center;
@@ -31,6 +32,28 @@ body {
 .error-message {
     color: red;
     font-size: 12px;
+}
+
+.cannoptin-logo {
+    max-height: 400px;
+}
+
+/* Medium screens (≤1250px) */
+@media (max-width: 1250px) {
+    .cannoptin-logo {
+        max-height: 300px;
+    }
+}
+
+/* Small screens (≤992px) */
+@media (max-width: 992px) {
+    .cannoptin-logo {
+        max-height: 200px;
+    }
+}
+
+#mc_embed_shell {
+    max-width: 700px; 
 }
 
 
@@ -88,7 +111,7 @@ body {
 
 #mc_embed_signup .mc-address-fields-group {
     justify-content: start !important;
-}
+    }
 
 
 .recaptcha {
@@ -135,6 +158,9 @@ body {
 .bg-dark-green-secondary {
     background-color: #347980;
 }
+
+
+
 
 
 /* Footer */
